@@ -2,7 +2,6 @@
 
 var manifest = {
   styles: [
-
     // purecss.io
     'node_modules/purecss/base.css',
     'node_modules/purecss/grids.css',
@@ -33,5 +32,3 @@ try {
 }
 
 module.exports = manifest;
-
-
