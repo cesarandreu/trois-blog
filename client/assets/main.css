@@ -8,11 +8,6 @@ a:hover, a:focus {
 }
 
 /* LAYOUT CSS */
-.pure-img-responsive {
-  max-width: 100%;
-  height: auto;
-}
-
 .header {
   text-align: center;
   top: auto;
