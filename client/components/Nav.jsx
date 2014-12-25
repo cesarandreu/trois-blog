@@ -34,7 +34,7 @@ var Nav = React.createClass({
       });
 
     return (
-      <nav className='nav'>
+      <nav>
         <ul className='nav-list'>
           {linkHTML}
         </ul>

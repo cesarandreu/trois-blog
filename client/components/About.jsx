@@ -5,7 +5,11 @@ var About = React.createClass({
   displayName: 'About',
   render: function () {
     return (
-      <p>This is a description of the site.</p>
+      <section>
+        <h1 className='content-subhead'>About</h1>
+        <p>This is a description of the site.</p>
+      </section>
+
     );
   }
 });

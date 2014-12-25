@@ -22,7 +22,7 @@ var PostList = React.createClass({
       return <PostItem post={post} key={post.id} context={context}/>;
     });
     return (
-      <section className='posts'>
+      <section>
         <h1 className='content-subhead'>Posts</h1>
         <div className='post-list'>{posts}</div>
       </section>

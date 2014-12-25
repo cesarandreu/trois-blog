@@ -1,5 +1,7 @@
 'use strict';
 var React = require('react');
+var NavLink = require('flux-router-component').NavLink;
+
 var Content = React.createClass({
   displayName: 'Content',
   render: function () {
@@ -19,18 +21,20 @@ var Footer = React.createClass({
       title: 'github',
       url: 'https://github.com/cesarandreu'
     }].map(function (link) {
-      return <a href={link.url} title={link.title} key={link.title}>{link.body}</a>;
+      return (
+        <li key={link.title}>
+          <a href={link.url} title={link.title}>
+            {link.body}
+          </a>
+        </li>
+      );
     });
 
     return (
       <footer className='footer'>
-        <div className='pure-menu pure-menu-horizontal pure-menu-open'>
-          <nav className='nav'>
-            <ul>
-              <li>{footerLinks}</li>
-            </ul>
-          </nav>
-        </div>
+        <nav className='pure-menu pure-menu-horizontal pure-menu-open'>
+          <ul>{footerLinks}</ul>
+        </nav>
       </footer>
     );
   }
@@ -43,8 +47,10 @@ var Sidebar = React.createClass({
       <div className='sidebar pure-u-1 pure-u-md-1-4'>
         <header className='header'>
           <hgroup>
-            <h1 className='brand-title'>Cesar Andreu</h1>
-            <h2 className='brand-tagline'>not a blog</h2>
+            <NavLink className='blog-link' routeName='home' context={this.props.context}>
+              <h1 className='blog-title'>Cesar Andreu</h1>
+            </NavLink>
+            <h2 className='blog-tagline'>not a blog</h2>
           </hgroup>
           {this.props.children}
         </header>

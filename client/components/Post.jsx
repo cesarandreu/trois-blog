@@ -26,19 +26,17 @@ var Post = React.createClass({
       };
 
     return (
-      <div className='posts'>
-        <h1>Post</h1>
-        <article className='post'>
-          <h2 className='post-title'>{this.state.post.title}</h2>
-          <div className='post-information'>
-            <NavLink className='post-permalink' {...navLinkProperties}>
-              Posted on <time dateTime={date.toISOString()}>{date.toUTCString()}</time>
-            </NavLink>
-          </div>
-          <div className='post-content' dangerouslySetInnerHTML={{__html: this.state.post.body}}/>
-          <div className='post-comments'>COMMENTS GO HERE</div>
-        </article>
-      </div>
+      <article>
+        <h1 className='content-subhead'>Post</h1>
+        <h2 className='post-title'>{this.state.post.title}</h2>
+        <div className='post-information'>
+          <NavLink className='post-permalink' {...navLinkProperties}>
+            Posted on <time dateTime={date.toISOString()}>{date.toUTCString()}</time>
+          </NavLink>
+        </div>
+        <div className='post-content' dangerouslySetInnerHTML={{__html: this.state.post.body}}/>
+        <div className='post-comments'>COMMENTS GO HERE</div>
+      </article>
     );
   }
 });

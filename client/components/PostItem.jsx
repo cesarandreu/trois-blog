@@ -16,7 +16,7 @@ var PostItem = React.createClass({
       };
 
     return (
-      <section className='post'>
+      <section>
         <h2 className='post-title'>
           <NavLink {...navLinkProperties}>
             {post.title}

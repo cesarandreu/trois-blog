@@ -50,10 +50,9 @@ var Application = React.createClass({
     //render content
     return (
       <div className='pure-g'>
-        <Sidebar>
+        <Sidebar context={this.props.context}>
           <Nav {...navProperties}></Nav>
         </Sidebar>
-
         <Content>
           <main>{output}</main>
           <Footer></Footer>
