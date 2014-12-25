@@ -22,6 +22,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node_modules/.bin/nodemon -e js,jsx server.js & node_modules/.bin/webpack --watch & node_modules/.bin/gulp dev",
     "build": "node_modules/.bin/gulp build",
+    "clean": "node_modules/.bin/gulp clean",
     "db:migrate": "node_modules/.bin/sequelize db:migrate",
     "db:create": "node_modules/.bin/create_database",
     "db:drop": "node_modules/.bin/drop_database"

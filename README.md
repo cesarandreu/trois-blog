@@ -29,6 +29,7 @@ Isomorphic website made with koa and flux/reactjs.
 * `npm run dev` - development mode
 * `npm run build` - production build
 * `npm run test` - execute tests
+* `npm run clean` - remove assets folder
 
 
 ## Tasks
