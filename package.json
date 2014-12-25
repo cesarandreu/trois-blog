@@ -21,6 +21,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node_modules/.bin/nodemon -e js,jsx server.js & node_modules/.bin/webpack --watch & node_modules/.bin/gulp dev",
+    "build": "node_modules/.bin/gulp build",
     "db:migrate": "node_modules/.bin/sequelize db:migrate",
     "db:create": "node_modules/.bin/create_database",
     "db:drop": "node_modules/.bin/drop_database"
@@ -40,6 +41,7 @@
     "gulp-concat": "^2.4.2",
     "gulp-minify-css": "^0.3.11",
     "gulp-rev": "^2.0.1",
+    "gulp-webpack": "^1.1.2",
     "jsx-loader": "^0.12.2",
     "koa": "^0.14.0",
     "koa-compose": "^2.3.0",
@@ -58,6 +60,7 @@
     "purecss": "^0.5.0",
     "pygmentize-bundled": "^2.3.0",
     "react": "^0.12.2",
+    "run-sequence": "^1.0.2",
     "sequelize": "^2.0.0-rc3",
     "sequelize-cli": "^1.0.0",
     "sequelize-migration-pg-extras": "^1.0.1",

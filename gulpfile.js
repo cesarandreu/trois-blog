@@ -3,6 +3,8 @@
 var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   minifyCSS = require('gulp-minify-css'),
+  runSequence = require('run-sequence'),
+  webpack = require('gulp-webpack'),
   concat = require('gulp-concat'),
   rev = require('gulp-rev'),
   del = require('del'),
@@ -24,7 +26,9 @@ gulp.task('images', function () {
 });
 
 // production builds
-gulp.task('build', ['build-styles', 'images']);
+gulp.task('build', function (cb) {
+  runSequence('clean', ['build-styles', 'build-application', 'images'], cb);
+});
 
 gulp.task('build-styles', function () {
   return gulp.src(manifest.styles)
@@ -37,6 +41,15 @@ gulp.task('build-styles', function () {
     .pipe(gulp.dest(config.assets));
 });
 
+
+gulp.task('build-application', function () {
+  return gulp.src(manifest.application)
+  .pipe(webpack(require('./webpack.dist.config.js')))
+  .pipe(rev())
+  .pipe(gulp.dest(config.assets))
+  .pipe(rev.manifest({path: 'application-manifest.json'}))
+  .pipe(gulp.dest(config.assets));
+});
 
 // development
 gulp.task('dev', ['dev-styles', 'images'], function () {

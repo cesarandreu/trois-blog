@@ -1,6 +1,10 @@
 'use strict';
 
 var manifest = {
+  application: [
+    'client/index.js'
+  ],
+
   styles: [
     // purecss.io
     'node_modules/purecss/base.css',
