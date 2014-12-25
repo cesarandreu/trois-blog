@@ -7,7 +7,9 @@ var thunkify = require('thunkify'),
 marked.setOptions({
   gfm: true,
   highlight: function (code, lang, callback) {
-    pygmentize({lang: lang, format: 'html'}, code, callback);
+    pygmentize({lang: lang, format: 'html', options: {nowrap: true}}, code, function (err, res) {
+      callback(err, res.toString().trim()); // prevents weird whitespace issues
+    });
   }
 });
 
