@@ -1,7 +1,5 @@
 'use strict';
 
-require('es6-promise').polyfill();
-
 var React = require('react');
 var debug = require('debug');
 var log = debug('blog:client');
