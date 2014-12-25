@@ -7,14 +7,14 @@ Isomorphic website made with koa and flux/reactjs.
 
 ## Running
 
-*Production*
+**Production**
 
 1. `NODE_ENV=production npm run db:create`
 2. `NODE_ENV=production npm run db:migrate`
 3. `npm run build`
 4. `NODE_ENV=production node index.js`
 
-*Development*
+**Development**
 
 1. `npm run db:create`
 2. `npm run db:migrate`
@@ -33,8 +33,8 @@ Isomorphic website made with koa and flux/reactjs.
 
 ## Tasks
 
-* `node ./lib/sync_repo_and_load_posts.js` - downloads repo from GH and synchronizes with database
-* `node ./lib/worker.js` - timed worker to run sync_repo_and_load_posts task
+* `node lib/sync_repo_and_load_posts.js` - downloads repo and synchronizes with database
+* `node lib/worker.js` - timed worker to run sync_repo_and_load_posts task
 
 
 ## Files / Folders
