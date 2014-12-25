@@ -1,22 +1,34 @@
 'use strict';
-var webpack = require('webpack');
+var webpack = require('webpack'),
+  path = require('path');
 
 module.exports = {
-    resolve: {
-        extensions: ['', '.js', '.jsx']
-    },
-    entry: './client/index.js',
-    output: {
-        path: __dirname + '/public/js',
-        filename: 'client.js'
-    },
-    module: {
-        loaders: [
-            { test: /\.css$/, loader: 'style!css' },
-            { test: /\.jsx$/, loader: 'jsx-loader' }
-        ]
-    },
-    plugins: [
-        // new webpack.optimize.UglifyJsPlugin()
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
+  entry: './client/index.js',
+  output: {
+    path: path.join(__dirname, '/public/assets'),
+    publicPath: '/assets/',
+    filename: 'application.js'
+  },
+
+  cache: true,
+  debug: true,
+  devtool: '#inline-source-map',
+
+  stats: {
+    colors: true,
+    reasons: true
+  },
+
+  module: {
+    loaders: [
+      { test: /\.jsx$/, loader: 'jsx-loader?harmony' }
     ]
+  },
+
+  plugins: [
+    new webpack.NoErrorsPlugin()
+  ]
 };
