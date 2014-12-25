@@ -14,6 +14,11 @@ var manifest = {
     'client/assets/main.css',
     'client/assets/syntax-highlighting.css'
   ],
+
+  images: [
+    'client/assets/cesar.jpg'
+  ],
+
   build: {
     css: '/assets/',
     js: '/assets/'

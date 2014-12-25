@@ -114,6 +114,11 @@ a:hover, a:focus {
   font-size: 90%;
 }
 
+.about {
+  line-height: 1.5em;
+  padding-right: 1em;
+}
+
 .avatar {
   max-height: 200px;
   border-radius: 100px;

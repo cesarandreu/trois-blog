@@ -17,8 +17,14 @@ gulp.task('clean', function (cb) {
   del([config.assets], cb);
 });
 
+// TODO: add asset revisioning
+gulp.task('images', function () {
+  gulp.src(manifest.images)
+    .pipe(gulp.dest(config.assets));
+});
+
 // production builds
-gulp.task('build', ['build-styles']);
+gulp.task('build', ['build-styles', 'images']);
 
 gulp.task('build-styles', function () {
   return gulp.src(manifest.styles)
@@ -33,7 +39,7 @@ gulp.task('build-styles', function () {
 
 
 // development
-gulp.task('dev', ['dev-styles'], function () {
+gulp.task('dev', ['dev-styles', 'images'], function () {
   gulp.watch(manifest.styles, ['dev-styles']);
 });
 
