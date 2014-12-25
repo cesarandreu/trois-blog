@@ -41,7 +41,6 @@ gulp.task('build-styles', function () {
     .pipe(gulp.dest(config.assets));
 });
 
-
 gulp.task('build-application', function () {
   return gulp.src(manifest.application)
   .pipe(webpack(require('./webpack.dist.config.js')))
@@ -50,6 +49,7 @@ gulp.task('build-application', function () {
   .pipe(rev.manifest({path: 'application-manifest.json'}))
   .pipe(gulp.dest(config.assets));
 });
+
 
 // development
 gulp.task('dev', ['dev-styles', 'images'], function () {
