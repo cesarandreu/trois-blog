@@ -3,6 +3,7 @@ var React = require('react');
 var PostStore = require('../stores/PostStore');
 var StoreMixin = require('fluxible-app').StoreMixin;
 var NavLink = require('flux-router-component').NavLink;
+var DisqusThread = require('./vendor/DisqusThread.jsx');
 
 var Post = React.createClass({
   mixins: [StoreMixin],
@@ -23,6 +24,11 @@ var Post = React.createClass({
         context: this.props.context,
         routeName: 'post',
         navParams: {post: post.name}
+      },
+      disqusProperties = {
+        shortname: 'cesarandreu-blog',
+        identifier: post.name,
+        title: post.title
       };
 
     return (
@@ -35,7 +41,9 @@ var Post = React.createClass({
           </NavLink>
         </div>
         <div className='post-content' dangerouslySetInnerHTML={{__html: this.state.post.body}}/>
-        <div className='post-comments'>COMMENTS GO HERE</div>
+        <div className='post-comments'>
+          <DisqusThread {...disqusProperties}/>
+        </div>
       </article>
     );
   }
