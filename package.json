@@ -59,6 +59,7 @@
     "sequelize-migration-pg-extras": "^1.0.1",
     "serialize-javascript": "^1.0.0",
     "superagent": "^0.21.0",
+    "supertest": "^0.15.0",
     "thunkify": "^2.1.2",
     "webpack": "^1.4.13"
   },
@@ -69,7 +70,6 @@
     "mocha-istanbul": "^0.2.0",
     "nodemon": "^1.2.1",
     "should": "^4.4.1",
-    "supertest": "^0.15.0",
     "supertest-as-promised": "^1.0.0",
     "webpack-dev-server": "^1.6.6"
   }
