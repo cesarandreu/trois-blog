@@ -2,9 +2,6 @@
 logs
 *.log
 
-# assets
-public
-
 # Dependency directory
 node_modules
 bower_components
