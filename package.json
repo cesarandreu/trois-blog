@@ -26,7 +26,6 @@
     "db:drop": "node_modules/.bin/drop_database"
   },
   "dependencies": {
-    "bluebird": "^2.4.0",
     "co": "^4.0.2",
     "co-fs": "^1.2.0",
     "debug": "^2.1.0",
