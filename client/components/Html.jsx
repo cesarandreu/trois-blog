@@ -2,7 +2,6 @@
 var React = require('react');
 var ApplicationStore = require('../stores/ApplicationStore');
 var manifest = require('../../manifest');
-var GAInitializer = require('react-google-analytics').Initializer;
 
 /**
  * React class to handle the rendering of the HTML head section
@@ -33,7 +32,6 @@ var Html = React.createClass({
         </body>
         <script dangerouslySetInnerHTML={{__html: this.props.state}}></script>
         <script src={manifest.build.js} defer></script>
-        <GAInitializer/>
       </html>
     );
   }

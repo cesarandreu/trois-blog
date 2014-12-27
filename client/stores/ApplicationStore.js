@@ -1,7 +1,6 @@
 'use strict';
 var createStore = require('fluxible-app/utils/createStore');
 var routesConfig = require('../configs/routes');
-var ga = require('react-google-analytics');
 
 var ApplicationStore = createStore({
   storeName: 'ApplicationStore',
@@ -28,7 +27,6 @@ var ApplicationStore = createStore({
     this.currentPage = page;
     this.currentRoute = route;
     this.emitChange();
-    ga('send', 'pageview');
   },
   updatePageTitle: function (title) {
     this.pageTitle = title.pageTitle;
