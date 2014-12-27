@@ -11,7 +11,6 @@ var manifest = {
     'node_modules/purecss/grids.css',
     'node_modules/purecss/grids-responsive.css',
     'node_modules/purecss/buttons.css',
-    'node_modules/purecss/forms.css',
     'node_modules/purecss/menus.css',
 
     // blog
