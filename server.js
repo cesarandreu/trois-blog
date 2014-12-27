@@ -6,7 +6,6 @@
 var koa = require('koa'),
   mount = require('koa-mount'),
   serve = require('koa-static'),
-  logger = require('koa-logger'),
   compress = require('koa-compress'),
   responseTime = require('koa-response-time');
 
@@ -30,9 +29,9 @@ app.api = api;
 /**
  * GLOBAL MIDDLEWARE
  */
-if (app.env !== 'test') {
+if (app.env === 'development') {
   log('logger enabled');
-  app.use(logger()); // request logging
+  app.use(require('koa-logger')()); // request logging
 }
 app.use(responseTime()); // x-response-time
 app.use(compress(config.server.middleware.compress)); // compression
