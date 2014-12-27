@@ -1,6 +1,10 @@
 'use strict';
 var createStore = require('fluxible-app/utils/createStore');
 var routesConfig = require('../configs/routes');
+var safeWindow = (function () {
+  // return window in browser and fake object in server
+  return typeof window === 'object' ? window : {_gaq: []};
+})();
 
 var ApplicationStore = createStore({
   storeName: 'ApplicationStore',
@@ -27,6 +31,7 @@ var ApplicationStore = createStore({
     this.currentPage = page;
     this.currentRoute = route;
     this.emitChange();
+    safeWindow._gaq.push(['_trackPageview']);
   },
   updatePageTitle: function (title) {
     this.pageTitle = title.pageTitle;
