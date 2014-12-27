@@ -75,20 +75,3 @@ function isReactRoute (_route) {
       route.method.toUpperCase() === _route.method;
   });
 }
-
-// /*
-//  * Share state
-//  *
-//  * @method shareState
-//  * @param {Object} application
-//  * @return {String}
-//  */
-// function shareState(application) {
-//   var state = application.context.dehydrate();
-//   var serializedState = serialize(state);
-
-//   return  '(function (root) {\n' +
-//     'root.App || (root.App = {});\n' +
-//     'root.App.Context = ' + serializedState +
-//     ';\n }(this));';
-// }
