@@ -2,8 +2,10 @@
 var React = require('react');
 var ApplicationStore = require('../stores/ApplicationStore');
 var manifest = require('../../manifest');
+
+// added navigator.doNotTrack!=="1" so it won't load if DNT is enabled
 var GA = 'var _gaq = [["_setAccount","UA-20550824-2"],["_trackPageview"]];';
-GA += '(function() {var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true; ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);})();';
+GA += 'navigator.doNotTrack!=="1"&&(function() {var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true; ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);})();';
 
 /**
  * React class to handle the rendering of the HTML head section
