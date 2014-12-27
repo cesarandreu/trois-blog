@@ -29,7 +29,7 @@ module.exports = function () {
 
     log('executing navigate action');
     try {
-      yield executeAction(navigateAction, {url: this.url});
+      yield executeAction(navigateAction, {url: this.url, method: this.method});
     } catch (err) {
       console.log('ERROR navigateAction', err);
       if (err && err.status) {
