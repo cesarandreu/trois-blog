@@ -3,7 +3,7 @@ var createStore = require('fluxible-app/utils/createStore');
 var routesConfig = require('../configs/routes');
 var safeWindow = (function () {
   // return window in browser and fake object in server
-  return typeof window === 'object' ? window : {_gaq: []};
+  return typeof window === 'object' ? window : {ga: function(){}};
 })();
 
 var ApplicationStore = createStore({
@@ -31,7 +31,7 @@ var ApplicationStore = createStore({
     this.currentPage = page;
     this.currentRoute = route;
     this.emitChange();
-    safeWindow._gaq.push(['_trackPageview']);
+    safeWindow.ga("send", "pageview");
   },
   updatePageTitle: function (title) {
     this.pageTitle = title.pageTitle;
