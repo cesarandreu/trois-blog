@@ -62,5 +62,4 @@ The request code is shared. To achieve this supertest is used, and the server in
 * Tests. I'm not sure how to test some of this flux/reactjs code.
 * Logging. Although nginx can collect access logs, it'd be great to have logs of when the worker ran. It'll be a good chance to experiment with existing logging frameworks for node. 
 * Meta tags for SEO
-* Google Analytics
 * Server-side rendering of comments? https://help.disqus.com/customer/portal/articles/472125-data-synchronization
