@@ -20,7 +20,7 @@ var ApplicationStore = createStore({
     var page = this.pages[pageName];
 
     if (pageName === this.getCurrentPageName()) {
-        return;
+      return;
     }
 
     this.currentPageName = pageName;
