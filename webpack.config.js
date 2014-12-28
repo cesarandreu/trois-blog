@@ -24,6 +24,7 @@ module.exports = {
 
   module: {
     loaders: [
+      { test: /\.js$/, loader: 'envify-loader' },
       { test: /\.jsx$/, loader: 'jsx-loader?harmony' }
     ]
   },
