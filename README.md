@@ -39,8 +39,8 @@ Isomorphic website made with koa and flux/reactjs.
 **cron**
 
 ```
-NODE_ENV=production
 DEBUG=*
+NODE_ENV=production
 0 * * * * node --harmony lib/sync_repo_and_load_posts.js >> logs/cron.log 2>&1
 ```
 
