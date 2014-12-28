@@ -99,7 +99,6 @@ module.exports = React.createClass({
   },
 
   componentWillUnmount: function () {
-    console.log('componentWillUnmount');
     this.removeDisqusScript();
   },
 
