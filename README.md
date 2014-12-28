@@ -35,7 +35,6 @@ Isomorphic website made with koa and flux/reactjs.
 ## Tasks
 
 * `node lib/sync_repo_and_load_posts.js` - downloads repo and synchronizes with database
-* `node lib/worker.js` - timed worker to run sync_repo_and_load_posts task
 
 
 ## Files / Folders
