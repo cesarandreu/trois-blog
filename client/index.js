@@ -7,7 +7,9 @@ var app = require('./app');
 
 var dehydratedState = window.App; // Sent from the server
 window.React = React; // For chrome dev tool support
-debug.enable('*');
+if (process.env.NODE_ENV !== 'production') {
+  debug.enable('*');
+}
 
 log('rehydrating app');
 app.rehydrate(dehydratedState, function (err, context) {
