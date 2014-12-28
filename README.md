@@ -11,7 +11,7 @@ Isomorphic website made with koa and flux/reactjs.
 
 1. `NODE_ENV=production npm run db:create`
 2. `NODE_ENV=production npm run db:migrate`
-3. `npm run build`
+3. `NODE_ENV=production npm run build`
 4. `NODE_ENV=production node index.js`
 
 **Development**
