@@ -70,6 +70,32 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+blockquote {
+  background-color: #efefef;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px rgba(0,0,0,0.1);
+  font-size: 18px;
+  font-style: italic;
+  margin: 0.25em 0;
+  padding: 0.25em 50px;
+  line-height: 1.45;
+  position: relative;
+}
+
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  color: #959393;
+}
+
+blockquote cite {
+  font-size: 16px;
+}
+
 .content-subhead {
   text-transform: uppercase;
   color: #aaa;
