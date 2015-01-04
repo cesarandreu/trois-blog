@@ -26,6 +26,7 @@ Isomorphic website made with koa and flux/reactjs.
 * `NODE_ENV=(development|test|production) npm run db:create` - create database
 * `NODE_ENV=(development|test|production) npm run db:drop` - drop database
 * `NODE_ENV=(development|test|production) npm run db:migrate` - migrate database
+* `NODE_ENV=(development|test|production) npm run db:refresh` - runs drop, create, migrate
 * `npm run dev` - development mode
 * `npm run build` - production build
 * `npm run test` - execute tests
