@@ -35,6 +35,7 @@ Isomorphic website made with koa and flux/reactjs.
 
 ## Tasks
 
+* `NODE_ENV=(development|test|production) node lib/sync_repo.js` - synchronizes database with posts, takes location as an argument, defaults to `public/repo`, example: `node lib/sync_repo.js /path/to/blog` 
 * `NODE_ENV=(development|test|production) node lib/sync_repo_and_load_posts.js` - downloads repo and synchronizes with database
 
 **cron**
