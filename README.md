@@ -70,3 +70,4 @@ The request code is shared. To achieve this supertest is used, and the server in
 * Meta tags for SEO
 * Server-side rendering of comments? https://help.disqus.com/customer/portal/articles/472125-data-synchronization
 * Polyfills for older browsers
+* Caching
