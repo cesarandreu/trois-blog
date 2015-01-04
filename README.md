@@ -35,7 +35,7 @@ Isomorphic website made with koa and flux/reactjs.
 
 ## Tasks
 
-* `node lib/sync_repo_and_load_posts.js` - downloads repo and synchronizes with database
+* `NODE_ENV=(development|test|production) node lib/sync_repo_and_load_posts.js` - downloads repo and synchronizes with database
 
 **cron**
 
